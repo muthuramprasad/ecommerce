@@ -1,0 +1,52 @@
+.line-over-price{
+    text-decoration: line-through !important;
+    margin-left: 10px;
+  }
+  .product-description{
+    color: rgb(142,144,154) !important;
+  }
+  .off{
+    color: rgb(255,150,100) !important;
+    font-weight: 900;
+  }
+  .tax{
+    color: rgb(3,168,142) !important;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .dress-size-h3{
+    font-size: 17px;
+    font-weight: 900;
+  }
+  .dress-size{
+    border: 1px solid  rgb(142,144,154);
+    margin-left: 10px;
+    padding: 17px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 900;
+    color: rgb(86, 87, 93);
+    border-radius: 5px;
+    
+  }
+  .add-to-bag-btn{
+    background-color: rgb(255,62,108) !important;
+    color: white !important;
+    padding: 20px 40px !important;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 22px !important;
+  }
+  .delivery-option>p{
+    color:  rgb(142,144,154) !important;
+   margin-left: -30px;
+  }
+  .dress-size.selected-size {
+    background-color: rgb(255, 62, 108);
+    color: white;
+    border: none;
+  }
+  

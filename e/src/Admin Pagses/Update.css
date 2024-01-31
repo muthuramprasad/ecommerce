@@ -1,0 +1,147 @@
+/* styles.css */
+.update{
+  font-size: 42px;
+  color: rgb(26,144,254);
+  font-weight: bold;
+}
+.image_top{
+  width: 200px !important;
+  height: 200px !important;
+  margin-left: 45px !important;
+}
+.custom-container {
+ 
+  
+    width: 100% !important;
+    height: 100vh;
+  }
+  
+  .custom-row {
+    margin-bottom: 20px;
+  }
+  
+  .custom-col {
+    padding: 10px;
+    
+    
+  }
+  
+  .custom-label {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+ 
+  }
+  
+  .custom-input {
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+
+  }
+  .custom-input:focus{
+    background-color: rgb(245, 244, 244);
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #b7b1b1,
+             -13px -13px 100px #3a3939;
+  }
+  
+  .custom-textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .custom-select {
+    margin-bottom: 10px;
+  }
+  
+  .custom-file-input {
+    margin-bottom: 10px;
+  }
+  
+  .custom-button {
+ 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .update_btn{
+    background-color: rgb(57, 167, 61) !important;
+
+    border-radius: 100px !important;
+  }
+ .edit_btn{
+  background-color: rgb(26,144,254)!important;
+ 
+  color: #ffffff !important;
+ }
+ .delete_btn{
+  background-color: rgb(26,144,254)!important;
+ 
+  color: white !important;
+ 
+ }
+ .table_head{
+  background-color: rgb(44,57,128) !important;
+  border: 1px solid rgb(255, 255, 255) !important;
+  padding:20px !important;
+ }
+.table_cell{
+  color: white !important;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px !important;
+  align-items: center !important;
+
+}
+
+
+.table_dat:hover{
+  background-color: rgba(44, 57, 128, 0.668) !important;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255) !important;
+  align-items: center;
+  color: rgb(247, 238, 238) !important;
+ 
+}
+
+.tr>th {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: rgb(26,144,254)!important;
+  color: rgb(255, 255, 255);
+  vertical-align: middle;
+  text-align: center;
+  
+}
+
+tr>td{
+border-bottom: 1px solid rgb(178, 172, 172);
+margin-bottom: 120px;
+font-size: 13px;
+color: rgb(125, 127, 131);
+font-family: 'Poppins', sans-serif;
+vertical-align: middle;
+grid-row: 10px;
+text-align: center;
+}
+
+.add_product_btn{
+  background-color: rgb(26,144,254)!important;
+  color: rgba(255, 253, 253, 0.901) !important;
+  font-family: 'Poppins', sans-serif;
+
+
+}
+.update_h6{
+  font-size: 13px;
+  color: rgb(125, 127, 131);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}

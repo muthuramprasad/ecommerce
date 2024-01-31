@@ -1,0 +1,69 @@
+*{
+    margin:0;
+  }
+  
+      
+    .kids{
+  height: auto;
+  background: rgb(34,195,85);
+  background: linear-gradient(349deg, rgba(34,195,85,0) 0%, rgba(0,0,0,0.5467436974789917) 55%);
+  padding: 20px;
+  z-index: 999;
+  margin-top: 100px;
+  
+   }
+   .d-block{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+   }
+  
+    .hero-all-text-kids{
+  margin-top:100px;
+  
+    
+    }
+    .top-new-kids{
+        font-family: 'Poppins', sans-serif;
+    color: rgb(244, 246, 246);
+      font-size: 36px;
+      font-weight: 600;
+      margin-left:20px;
+  
+    }
+  
+    .For-kids{
+      color: rgb(239, 240, 242);
+      font-size: 70px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .BEST-SELLER-kids{
+        color: rgb(243, 237, 237);
+      font-size: 20px;
+      margin-left: 20px;
+      font-weight: 900;
+      font-family: 'Poppins', sans-serif;
+    }
+    .buy-Now{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap:15px;
+      width:207px;
+      height:70px;
+      border-radius:75px;
+      margin-top:30px;
+      background:#ee0303;
+      color:white;
+    font-size:22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    cursor: pointer;
+   
+    }
+    .img-fluid-kids{
+        height: 400px;
+        width: 600px;
+        margin-top: 90px;
+    }

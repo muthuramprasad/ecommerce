@@ -1,0 +1,21 @@
+/* AppBreadCrumb.css */
+.crum {
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: uppercase;
+   
+  }
+  
+  .crum span {
+    margin-right: 5px; /* Adjust spacing between breadcrumb items */
+  }
+  
+  .crum a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color:rgb(125, 137, 129) !important;
+    
+  }
+  
+  

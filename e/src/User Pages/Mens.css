@@ -1,0 +1,16 @@
+*{
+    list-style-type: none !important;
+    text-decoration: none !important;
+}
+
+.ul-filter-nav{
+
+height: 100vh;
+}
+label{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(125, 127, 131) !important;
+}
+.product-image-mens1{
+    width: 180px;
+}

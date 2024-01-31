@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+.dashboard_h1{
+    font-size: 42px;
+    color: rgb(26,144,254);
+    font-weight: bold;
+}
+.welcone_h6{
+    font-size: 13px;
+    color: rgb(125, 127, 131);
+}
+ 
+.total_products{
+  width: 300px;
+  padding: 15px;
+  border-radius:20px ;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  font-family: 'Poppins', sans-serif;
+  background-color:rgb(39,117,255);
+  color:rgb(252,247,248);
+} 
+
+.total_products_cost{
+    width: 300px;
+    padding: 15px;
+    border-radius:20px ;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(39,117,255);
+    color:rgb(252,247,248);
+  } 
+
+  .total_Mens_products{
+    width: 300px;
+    padding: 15px;
+    border-radius:20px ;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(119,71,202);
+    color:rgb(252,247,248);
+  } 
+
+  .total_womens_products{
+    width: 300px;
+    padding: 15px;
+    border-radius:20px ;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(251,123,185);
+    color:rgb(252,247,248);
+  }
+  .total_kids_products{
+    width: 300px;
+    padding: 15px;
+    border-radius:20px ;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(99,220,180);
+    color:rgb(252,247,248);
+  }
+.total_product_number{
+    color: rgb(205, 210, 213);
+}
+
+
+
+.table_head{
+background-color: rgba(80, 81, 104, 0.962) !important;
+color: white !important;
+font-family: 'Poppins', sans-serif !important;
+font-size: 18px;
+padding: 5px !important;
+font-weight:-100 !important;
+text-align: center; /* Center content horizontally */
+vertical-align: middle;
+padding: 10px !important;
+}
+
+.table_data{
+  background-image: linear-gradient(to right, rgba(79, 3, 255, 0.542), rgba(154, 41, 235, 0.586));
+
+  color: white !important;
+font-family: 'Poppins', sans-serif !important;
+font-size: 12px;
+padding: 10px;
+
+}
+.td {
+font-size: 12px;
+font-family: 'Poppins', sans-serif !important;
+  padding: 10px;
+  text-align: center; 
+  vertical-align: middle; 
+
+
+}
+.app{
+  background-color:rgb(26,144,254) !important;
+}
+
+

@@ -1,0 +1,132 @@
+.promo-code-p{
+    color: #626262;
+    max-width: 390px;
+}
+.promo-code-btn{
+  background-color: rgb(255,62,108) !important;
+    color: white;
+  padding: 12px 20px 12px 20px;
+  border: none;
+
+}
+
+.promo-code-input{
+  
+    color: rgb(6, 0, 0);
+  padding: 10px 20px 10px 20px;
+
+}
+.cart-table-data-body{
+    border-bottom:1px solid #c3bfbf;
+}
+.cart-table-data {
+  
+   text-align: center;
+color: #626262;
+width:100px;
+
+  }
+  .quanitiy{
+    font-weight: 800;
+  }
+
+  .cart-table-heading{
+      
+   text-align: center;
+   background-color: #626262 !important;
+   color: white !important;
+   width:100px;
+  }
+  
+  /* Add these styles if you want to center the entire table vertically and horizontally */
+  .table-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Add these styles if you want to center the entire row vertically and horizontally */
+  .table-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .remove-btn{
+    border: none;
+    outline: none;
+  }
+  .delivery-p{
+    color: #626262;
+  }
+
+  .order-btn{
+    background-color: rgb(255,62,108) !important;
+    color: white !important;
+    padding: 15px 30px !important;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 22px !important;
+  }
+
+  /* Add this CSS code to your existing CSS file or create a new one */
+
+/* Styles for the modal content */
+.dialog-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.dialog-content {
+  padding: 20px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: 300ms ease-in-out;
+  outline: none;
+  border: none;
+
+}
+.input-field:focus{
+  background-color: rgb(245, 244, 244);
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #b7b1b1,
+             -13px -13px 100px #3a3939;
+             outline: none;
+             border: none;
+           
+}
+.total-cost {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styles for the modal actions (buttons) */
+.dialog-actions {
+  justify-content: center;
+}
+
+/* Additional styles for the "Order Here" button */
+.order-btn-popup {
+  background-color: rgb(255,62,108)!important;
+  color: white !important;
+  padding: 5px 10px !important;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px !important;
+}
+
+/* Additional styles for the success toast */
+.success-toast {
+  /* Add your toast styles here */
+}
