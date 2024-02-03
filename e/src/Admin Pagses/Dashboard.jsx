@@ -38,13 +38,13 @@ const Dashboard = () => {
                     <MenuItem icon={<GrUpdate />} component={<Link to="update" className="link" />}>
                         Update
                     </MenuItem>
-                    <SubMenu label="Order" icon={<ShoppingCartCheckoutIcon />}>
-                        <MenuItem icon={<TimelineRoundedIcon />} component={<Link to="/dashboard/pending" className="link" />} > Pending </MenuItem>
-                        <MenuItem icon={<BubbleChartRoundedIcon /> } component={<Link to="/dashboard/orders"/>} > Delivered </MenuItem>
-                    </SubMenu>
-                    <SubMenu label="Message" icon={<MailOutlineIcon />}>
+                  
+                        {/* <MenuItem icon={<TimelineRoundedIcon />} component={<Link to="/dashboard/pending" className="link" />} > Pending </MenuItem> */}
+                        <MenuItem icon={<BubbleChartRoundedIcon /> } component={<Link to="/dashboard/orders"/>} >To Delivered </MenuItem>
+              
+                    {/* <SubMenu label="Message" icon={<MailOutlineIcon />}>
                         <MenuItem icon={<ChatIcon />}> Feedback </MenuItem>
-                    </SubMenu>
+                    </SubMenu> */}
                     <SubMenu label="Settings" icon={<SettingsApplicationsRoundedIcon />} >
                         <MenuItem icon={<AccountCircleRoundedIcon />}> Account </MenuItem>
                     </SubMenu>

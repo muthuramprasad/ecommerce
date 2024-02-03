@@ -23,10 +23,10 @@ const Carts = () => {
   const products = useSelector((state) => state.carts.items);
   const dispatch = useDispatch();
 
-  const RemoveFromCart = (id) => {
-    dispatch(removeFromCart(id));
+  const RemoveFromCart = (id, size) => {
+    dispatch(removeFromCart({ id, size }));
   };
-
+  
   const { totalQuantity, totalCost } = products.reduce(
     (accumulator, product) => {
       accumulator.totalQuantity += product.quantity || 0;
@@ -135,9 +135,12 @@ const Carts = () => {
               <td className='cart-table-data quanitiy' >{product.quantity}</td>
               <td className='cart-table-data' >{product.price}</td>
               <td className='cart-table-data' >   
-              <button onClick={() => RemoveFromCart(product._id)} className='remove-btn'>
-                <ClearOutlinedIcon/>
-              </button> </td>
+
+              <button onClick={() => RemoveFromCart(product._id, product.size)} className='remove-btn'>
+  <ClearOutlinedIcon />
+</button>
+
+               </td>
              
             </tr>
             

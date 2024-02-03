@@ -1,0 +1,45 @@
+.orders-container {
+    align-items: center;
+    margin-left: 30px;
+}
+
+.order-table-td {
+    vertical-align: middle;
+    align-items: center;
+}
+
+.orders-container .order-table-td th {
+    color: rgb(241, 232, 232);
+    background-color: rgb(26, 144, 254) !important;
+    text-align: center; /* Center the table headings */
+    position: sticky; /* Make the table headings sticky */
+    top: 0; /* Stick to the top */
+}
+
+.order-delete-btn {
+    padding: 10px 20px;
+    color: rgb(26, 144, 254) !important;
+}
+
+.delivery-h1 {
+    font-size: 42px;
+    color: rgb(26, 144, 254);
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.delivery-h6 {
+    font-size: 13px;
+    color: rgb(125, 127, 131);
+    margin-left: 33px;
+}
+
+.delivery-table-row td {
+    color: rgb(125, 127, 131) !important;
+    align-items: center;
+    padding: 2px 6px;
+}
+
+.order-table-td tr th {
+    text-transform: uppercase;
+}

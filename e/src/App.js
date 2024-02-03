@@ -18,7 +18,7 @@ import NoPage from './User Pages/NoPage';
 import Dashbord_Home from './Admin Pagses/Dashbord_Home';
 import RootLayout from './Navbar/RootLayout';
 import Carts from './User Pages/Carts';
-import MensProductsDetails from './User Pages/MensProductsDetails';
+import ProductsDetails from './User Pages/ProductsDetails';
 
 function App() {
     return (
@@ -27,11 +27,11 @@ function App() {
                 <Route path='/' element={<RootLayout/>}>
                 <Route index element={<Home />} />
                 <Route path='/mens' element={<Mens />} />
-                <Route path='/mens/:title' element={<MensProductsDetails/>} />
+                <Route path='/mens/:title' element={<ProductsDetails category="mens" />} />
                 <Route path='/womans' element={<Womans />} />
-                <Route path='/womans/:title' element={<MensProductsDetails/>} />
+                <Route path='/womans/:title' element={<ProductsDetails category="womans" />} />
                 <Route path='/kids' element={<Kids />} />
-                <Route path='/kids/:title' element={<MensProductsDetails/>} />
+                <Route path='/kids/:title' element={<ProductsDetails category="kids" />} />
               
      <Route path='/carts' element={<Carts />} />
                 <Route path='/login' element={<Login />} />

@@ -1,5 +1,5 @@
 .item_col{
-    transition: 1s;
+    
     vertical-align: center;
     align-items: center;
     margin-left: auto;
@@ -7,8 +7,8 @@
 }
 .item_col:hover{
     margin-top: -12px;
-    transition: 1s;
-    scale: 1.1;
+    
+   
 }
 .product-image {
     width: 290px;

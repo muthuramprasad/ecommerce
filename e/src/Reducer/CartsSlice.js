@@ -42,18 +42,23 @@ const cartsSlice = createSlice({
         state.items.push(newItem);
       }
     },
-    removeFromCart: (state, action) => {
-      const itemIdToRemove = action.payload;
-      const itemToRemove = state.items.find((item) => item._id === itemIdToRemove);
 
-      if (itemToRemove) {
-        if (itemToRemove.quantity > 1) {
-          itemToRemove.quantity -= 1;
-        } else {
-          state.items = state.items.filter((item) => item._id !== itemIdToRemove);
-        }
-      }
-    },
+
+   removeFromCart: (state, action) => {
+  const { id, size } = action.payload;
+  const itemToRemove = state.items.find((item) => item._id === id && item.size === size);
+
+  if (itemToRemove) {
+    if (itemToRemove.quantity > 1) {
+      itemToRemove.quantity -= 1;
+    } else {
+      state.items = state.items.filter((item) => !(item._id === id && item.size === size));
+    }
+  }
+},
+
+
+
     clearCart: (state) => {
       state.items = [];
     },

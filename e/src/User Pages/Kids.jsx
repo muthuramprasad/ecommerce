@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import './Mens.css'
 import { Link } from "react-router-dom";
 
-const Mens = () => {
+const Kids= () => {
   const [mensProducts, setMensProducts] = useState([]);
   const [error, setError] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("Kids");
@@ -545,4 +545,4 @@ const Mens = () => {
   );
 };
 
-export default Mens;
+export default Kids;

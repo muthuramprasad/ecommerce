@@ -12,7 +12,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(express.json()); // Adjust the payload limit as needed
+app.use(cors()); // Adjust the payload limit as needed
 app.use(express.json({ limit: '10mb' })); // Adjust the payload limit as needed
 
 
@@ -252,8 +252,6 @@ app.post('/api/signin', async (req, res) => {
 // server.js
 // Define the order schema and model
 const orderSchema = new mongoose.Schema({
-  phoneNumber: String,
-  address: String,
   products: [{
     title: String,
     image: String,
@@ -265,11 +263,33 @@ const orderSchema = new mongoose.Schema({
     colors: String,
     category: String,
   }],
+  info: {
+    phoneNumber: String,
+    address: String,
+  },
+  createdAt: { type: Date, default: Date.now }
 });
 
 const Order = mongoose.model('Order', orderSchema);
 
 // ... (Other routes and middleware)
+
+
+app.get('/api/get-orders', async (req, res) => {
+  try {
+    const orders = await Order.find()
+      .sort({ createdAt: -1 }) // Sort by createdAt in descending order (new to old)
+      .exec();
+
+    res.status(200).json(orders);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+
 
 // Route for placing orders
 app.post('/api/place-order', async (req, res) => {
@@ -278,14 +298,28 @@ app.post('/api/place-order', async (req, res) => {
     console.log('Received order data:', req.body);
 
     const order = new Order({
-      phoneNumber,
-      address,
       products,
+      info: {
+        phoneNumber,
+        address,
+      },
     });
 
     await order.save();
 
     res.status(201).json({ message: 'Order placed successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// Add this route in your server code
+app.delete('/api/delete-order/:id', async (req, res) => {
+  try {
+    const orderId = req.params.id;
+    await Order.findByIdAndDelete(orderId);
+    res.status(200).json({ message: 'Order deleted successfully' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });

@@ -1,66 +1,103 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Table from 'react-bootstrap/Table';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import {placeOrder } from '../Reducer/orderThunks';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import './Orders.css'
 
 const Orders = () => {
-  const orders = useSelector((state) => state.orders);
-  const dispatch = useDispatch();
+  const [orders, setOrders] = useState([]);
+ 
 
   useEffect(() => {
-    // Fetch orders when the component mounts
-    dispatch(placeOrder());
-  }, [dispatch]);
+    const fetchOrders = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/api/get-orders');
+        setOrders(response.data);
+      } catch (error) {
+        console.error('Error fetching orders:', error);
+      }
+    };
+
+    fetchOrders();
+  }, []);
+
+  const handleDeleteOrder = async (orderId) => {
+    const shouldDelete = window.confirm('Are you sure you want to delete this order?');
+
+    if (shouldDelete) {
+      try {
+        await axios.delete(`http://localhost:3001/api/delete-order/${orderId}`);
+        setOrders(orders.filter(order => order._id !== orderId));
+        console.log('Order deleted successfully');
+      } catch (error) {
+        console.error('Error deleting order:', error);
+      }
+    } else {
+      console.log('Deletion canceled');
+    }
+  };
+
+ 
 
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Phone Number</th>
-                <th>Address</th>
-                <th>Products</th>
+    <div>
+         <h1 className='delivery-h1'>Orders</h1>
+      <h6 className='delivery-h6'>Deliver Your Order</h6> <br />
+    <div style={{ overflowY: 'auto', maxHeight: '500px',width:'155%' }} className='orders-container'>
+     
+      <Table striped bordered hover responsive>
+        <thead className='order-table-td ' >
+          <tr>
+            <th>Title</th>
+            <th>Size</th>
+            
+            <th>Quantity</th>
+            <th>Total Cost</th>
+            <th>Image</th>
+            <th>Phone Number</th>
+            
+            <th>Address</th>
+         
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orders.map((order, orderIndex) => (
+            order.products.map((product, productIndex) => (
+              <tr key={`${orderIndex}-${productIndex}`} className='delivery-table-row'>
+                <td>{product.title}</td>
+                <td>{product.size}</td>
+                <td>{product.totalQuantity}</td>
+                <td>{product.totalCost}</td>
+                <td>
+                  {product.image && (
+                    <img
+                      src={`data:image/jpeg;base64,${product.image}`}
+                      alt={`Product ${productIndex + 1}`}
+                      width={60}
+                      height={60}
+                    />
+                  )}
+                </td>
+                <td>{order.info && order.info.phoneNumber}</td>
+                <td>{order.info && order.info.address}</td>
+                
+              
+                <td>
+                  <Button className='order-delete-btn' onClick={() => handleDeleteOrder(order._id)}>
+
+                    <DeleteIcon/>
+                  </Button>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {orders && orders.map((order, index) => (
-                <tr key={order._id}>
-                  <td>{index + 1}</td>
-                  <td>{order.phoneNumber}</td>
-                  <td>{order.address}</td>
-                  <td>
-                    <ul>
-                      {order.products.map((product, productIndex) => (
-                        <li key={productIndex}>
-                          <strong>Title:</strong> {product.title},{' '}
-                          <strong>Size:</strong> {product.size},{' '}
-                          <strong>Quantity:</strong> {product.totalQuantity},{' '}
-                          <strong>Total Cost:</strong> {product.totalCost}
-                          {product.image && (
-                            <img
-                              src={`data:image/jpeg;base64,${product.image}`}
-                              alt=""
-                              width={60}
-                              height={60}
-                            />
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        </Col>
-      </Row>
-    </Container>
+            ))
+          ))}
+        </tbody>
+      </Table>
+    </div>
+    </div>
   );
 };
 
