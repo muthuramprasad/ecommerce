@@ -1,92 +1,46 @@
 
-*{
-    list-style-type: none !important;
-    list-style: none !important;
-    text-decoration: none;
-}
-.navbar1{
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    box-shadow: 0 1px 3px -2px black;
-    font-family: 'Poppins', sans-serif;
-}
-.nav-logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.nav-logo p{
-    color: #171717;
-    font-size: 30px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+.navbar-top-all{
+    background-color: white !important;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 50px;
-    color: #626262;
-    font-size: 15px;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-}
 
-.nav-menu li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    color: #515151 !important;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-}
-.nav-menu hr{
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background:#f00000 !important ;
-}
 
-.nav-login-cart{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    color: #515151 !important;
-}
-
-.nav-login-cart button{
-    width: 107px;
-    height: 38px;
-    outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 55px;
-    color: #515151 !important;
-    font-size: 15px;
-    font-weight: 500;
-    background: white;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-}
-
-.nav-login-cart button:active{
-    background: #f3f3f3;
-}
-.nav-cart-zero{
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -29px;
-    margin-left: -55px;
-    border-radius: 11px;
-    font-size: 14px;
-    background: red;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
+/* CSS for Tablet Screens */
+@media only screen and (min-width: 768px) {
+    .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto !important;
+    }
+  
+    .navbar-nav {
+      margin-left: auto;
+    }
+  
+    .ml-auto {
+      margin-left: 0;
+    }
+  }
+  
+  /* CSS for Mobile Screens */
+  @media only screen and (max-width: 767px) {
+    .navbar-collapse {
+      justify-content: center !important;
+      gap: 20px !important;
+      margin-left: 0 !important;
+    }
+  
+    .mr-auto{
+      margin-left: 0 !important;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .ml-auto{
+        position: relative;
+        left: -240px;
+       
+    }
+  }
+  

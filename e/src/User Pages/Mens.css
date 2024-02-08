@@ -14,3 +14,32 @@ label{
 .product-image-mens1{
     width: 180px;
 }
+.fluid-product{
+    margin-bottom: 1000px;
+}
+
+.side_Navbar {
+    /* background-color: #f1f1f1; */
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .side_Navbar {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      display: none;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .side_Navbar {
+      display: block;
+      position: relative;
+    }
+  
+    .col-md-10 {
+      margin-left: 0;
+    }
+  }
+  

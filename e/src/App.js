@@ -27,11 +27,12 @@ function App() {
                 <Route path='/' element={<RootLayout/>}>
                 <Route index element={<Home />} />
                 <Route path='/mens' element={<Mens />} />
-                <Route path='/mens/:title' element={<ProductsDetails category="mens" />} />
+                <Route path='/mens/:id' element={<ProductsDetails category="mens" />} />
+
                 <Route path='/womans' element={<Womans />} />
-                <Route path='/womans/:title' element={<ProductsDetails category="womans" />} />
+                <Route path='/womans/:id' element={<ProductsDetails category="womans" />} />
                 <Route path='/kids' element={<Kids />} />
-                <Route path='/kids/:title' element={<ProductsDetails category="kids" />} />
+                <Route path='/kids/:id' element={<ProductsDetails category="kids" />} />
               
      <Route path='/carts' element={<Carts />} />
                 <Route path='/login' element={<Login />} />
@@ -51,6 +52,7 @@ function App() {
 
                 <Route path='*' element={<NoPage />} />
             </Routes>
+            
         </>
     );
 }

@@ -2,8 +2,8 @@
 .loginsignup{
     width: 100%;
     height: 100vh;
-    background: rgb(223,139,216);
-    background: linear-gradient(349deg, rgba(223,139,216,0.7624299719887955) 0%, rgba(221,227,227,0.6055672268907564) 63%);
+    background: rgb(247, 244, 247);
+    background: linear-gradient(349deg, rgba(195, 192, 195, 0.762) 0%, rgba(255, 254, 254, 0.606) 63%);
     padding-top: 100px;
     background-repeat: no-repeat;
     background-size: cover;

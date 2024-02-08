@@ -1,82 +1,52 @@
 import React, { useState } from 'react';
 import Logo from './Logo/pngtree-online-shop-logo-design-image_235764-removebg-preview.png';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import './Navbar.css';
 import { Link } from 'react-router-dom';
-import { LogOut } from '../Reducer/ProductSlice'; // Import Link from 'react-router-dom'
+import { LogOut } from '../Reducer/ProductSlice';
 import { clearCart } from '../Reducer/CartsSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from '@mui/material';
+import { Button, Navbar, Nav } from 'react-bootstrap';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { selectTotalQuantity } from '../Reducer/CartsSlice';
-
+import './Navbar.css'
 
 
 const Top_Navbar = () => {
-  const [menu, setMenu] = useState('shop');
+  
   const isAuthenticated = useSelector((state) => state.products.isAuthenticated);
   const totalQuantity = useSelector(selectTotalQuantity);
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleLogout = () => {
     dispatch(clearCart());
     dispatch(LogOut());
   };
 
-
   return (
-    <div className="navbar1">
-      <div className="nav-logo">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='navbar-top-all'>
+      <Navbar.Brand as={Link} to="/">
         <img src={Logo} alt="logo" width={100} height={120} />
-        <p>Indo shopping</p>
-      </div>
-      <ul className="nav-menu">
-        <li onClick={() => setMenu('shop')}>
-          <Link to="/" style={{textDecoration:'none',color:"#515151 "}}>Shop</Link>
-          {menu === 'shop' ? <hr /> : <></>}
-        </li>
-        <li onClick={() => setMenu('mens')}>
-          <Link to="mens" style={{textDecoration:'none',color:"#515151 "}}>Mens</Link>
-          {menu === 'mens' ? <hr /> : <></>}
-        </li>
-        <li onClick={() => setMenu('womans')}>
-          <Link to="womans" style={{textDecoration:'none',color:"#515151 "}}>Womans</Link>
-          {menu === 'womans' ? <hr /> : <></>}
-        </li>
-        <li onClick={() => setMenu('kids')}>
-          <Link to="kids" style={{textDecoration:'none',color:"#515151 "}}>Kids</Link>
-          {menu === 'kids' ? <hr /> : <></>}
-        </li>
-      </ul>
-      <div className="nav-login-cart">
-       
-          
-          
-      {isAuthenticated ? (
-  <Button variant="outlined" onClick={handleLogout}>
-    Logout
-  </Button>
-) : (
-  <Link to='login' style={{textDecoration:'none',color:"#515151 "}}>
-    <Button variant="outlined" startIcon={<LockOutlinedIcon/>} >
-      Login
-    </Button>
-  </Link>
-)}
-          
-         
-        <Link to='carts'><ShoppingCartOutlinedIcon /></Link>
-        {isAuthenticated ? (
- <div className="nav-cart-zero"> {totalQuantity}</div>
-) : (
-  <Link to='login' style={{textDecoration:'none',color:"#515151 "}}>
-   <div >{}</div>
-  </Link>
-)}
-      
-        
-      </div>
-    </div>
+        <span style={{fontWeight:'900'}}>SHOPPER</span>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto" style={{gap:'60px',display:'flex',justifyContent:'center',marginLeft:'280px'}}>
+          <Nav.Link as={Link} to="/" className="text-center">Shop</Nav.Link>
+          <Nav.Link as={Link} to="/mens" className="text-center">Mens</Nav.Link>
+          <Nav.Link as={Link} to="/womans" className="text-center">Womans</Nav.Link>
+          <Nav.Link as={Link} to="/kids" className="text-center">Kids</Nav.Link>
+        </Nav>
+        <Nav className="ml-auto" style={{float:'right',marginLeft:'450px'}}>
+          {isAuthenticated ? (
+            <Button variant="outline-secondary" onClick={handleLogout}>Logout</Button>
+          ) : (
+            <Link to='/login' className="nav-link"><Button variant="outline-secondary" startIcon={<LockOutlinedIcon />} >Login</Button></Link>
+          )}
+          <Nav.Link as={Link} to="/carts"><ShoppingCartOutlinedIcon /></Nav.Link>
+          {isAuthenticated && <div className="nav-cart-zero">{totalQuantity}</div>}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 

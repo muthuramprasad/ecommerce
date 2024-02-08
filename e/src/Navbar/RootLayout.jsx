@@ -2,6 +2,7 @@ import React from 'react'
 import Top_Navbar from './Top_Navbar'
 import { Outlet } from 'react-router-dom'
 import AppBreadCrumb from '../BreadCrum/AppBreadCrumb'
+import Footer from '../Footer/Footer'
 
 const RootLayout = () => {
   return (
@@ -12,10 +13,14 @@ const RootLayout = () => {
       <div style={{marginLeft:'290px'}}>
       <AppBreadCrumb />
       </div>
-    
+     
      <main>
         <Outlet/>
-      </main>
+      </main> <br />
+      <hr />
+      <footer >
+      <Footer/>
+      </footer>
     </div>
   )
 }

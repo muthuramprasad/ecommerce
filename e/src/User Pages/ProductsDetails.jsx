@@ -17,7 +17,10 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 const MensProductsDetails = () => {
-  const { title } = useParams();
+  
+
+
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
@@ -30,8 +33,9 @@ const MensProductsDetails = () => {
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/get-product/${title}`);
+        const response = await axios.get(`http://localhost:3001/api/get-product/${id}`);
         setProduct(response.data);
+        dispatch(setProductTitle(response.data.title));
       } catch (error) {
         console.error('Error fetching product details:', error);
         // Handle error, e.g., redirect to an error page
@@ -39,7 +43,7 @@ const MensProductsDetails = () => {
     };
 
     fetchProductDetails();
-  }, [title]);
+  }, [id]);
 
   if (!product) {
     // You can show a loading spinner or an error message here

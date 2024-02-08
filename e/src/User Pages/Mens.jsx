@@ -134,7 +134,7 @@ const Mens = () => {
     });
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid  fluid-product">
       <div className="row mt-5 mx-2">
         <div className="col-md-2">
           <ul className="ul-filter-nav">
@@ -508,7 +508,7 @@ const Mens = () => {
           
             {filteredProducts.map((product) => (
               <Col key={product._id} xs={12} md={2} className="item_col  mb-5">
-         <Link to={`/mens/${product.title}`}>
+         <Link to={`/mens/${product._id}`}>
 
                 <div className="product-item">
                   {product.images[0] && (

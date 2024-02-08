@@ -83,10 +83,10 @@ app.get('/api/get-products', async (req, res) => {
 });
 
 
-app.get('/api/get-product/:title', async (req, res) => {
+app.get('/api/get-product/:id', async (req, res) => {
   try {
-    const title = req.params.title;
-    const product = await Product.findOne({ title });
+    const productId = req.params.id;
+    const product = await Product.findById(productId);
 
     if (!product) {
       return res.status(404).json({ error: 'Product not found' });
@@ -98,6 +98,7 @@ app.get('/api/get-product/:title', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 app.post('/api/add-product', upload.fields([
   { name: 'image1', maxCount: 1 },

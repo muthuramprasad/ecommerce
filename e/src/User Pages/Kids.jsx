@@ -520,7 +520,7 @@ const Kids= () => {
         
             {filteredProducts.map((product) => (
               <Col key={product._id} xs={12} md={2} className="item_col  mb-5">
-                <Link to={`/kids/${product.title}`}>
+                <Link to={`/kids/${product._id}`}>
                 <div className="product-item">
                   {product.images[0] && (
                     <img
