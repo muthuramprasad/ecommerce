@@ -19,6 +19,7 @@ import Dashbord_Home from './Admin Pagses/Dashbord_Home';
 import RootLayout from './Navbar/RootLayout';
 import Carts from './User Pages/Carts';
 import ProductsDetails from './User Pages/ProductsDetails';
+import Footer from './Footer/Footer';
 
 function App() {
     return (
@@ -52,7 +53,7 @@ function App() {
 
                 <Route path='*' element={<NoPage />} />
             </Routes>
-            
+          
         </>
     );
 }

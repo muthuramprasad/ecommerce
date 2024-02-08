@@ -10,17 +10,15 @@ const RootLayout = () => {
      
       <Top_Navbar/>
       <br />
-      <div style={{marginLeft:'290px'}}>
+      {/* <div style={{marginLeft:'290px'}}>
       <AppBreadCrumb />
-      </div>
+      </div> */}
      
      <main>
         <Outlet/>
       </main> <br />
       <hr />
-      <footer >
-      <Footer/>
-      </footer>
+    <Footer/>
     </div>
   )
 }

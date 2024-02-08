@@ -35,7 +35,7 @@ const MensProductsDetails = () => {
       try {
         const response = await axios.get(`http://localhost:3001/api/get-product/${id}`);
         setProduct(response.data);
-        dispatch(setProductTitle(response.data.title));
+        // dispatch(setProduct(response.data.title));
       } catch (error) {
         console.error('Error fetching product details:', error);
         // Handle error, e.g., redirect to an error page

@@ -22,12 +22,15 @@ import Update from './Update';
 import Dashbord_Home from './Dashbord_Home';
 import Pendings from './Pendings';
 import Orders from './Orders';
-
+import AdminNavbar from '../Admin Pagses/AdminNavBar'
 
 const Dashboard = () => {
+    
     const { collapseSidebar } = useProSidebar();
 
     return (
+        <div>
+            <AdminNavbar/>
         <div style={{ display: "flex", height: "100vh" }}>
             <Sidebar className="app">
                 <Menu>
@@ -54,6 +57,7 @@ const Dashboard = () => {
             <Outlet/>
 <section>
 </section>
+        </div>
         </div>
     );
 }

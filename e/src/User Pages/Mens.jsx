@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./Mens.css";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 
 const Mens = () => {
@@ -134,6 +135,7 @@ const Mens = () => {
     });
 
   return (
+    <div>
     <div className="container-fluid  fluid-product">
       <div className="row mt-5 mx-2">
         <div className="col-md-2">
@@ -540,6 +542,8 @@ const Mens = () => {
         </div>
       </div>
    
+    </div> <br />
+    {/* <Footer/> */}
     </div>
   );
 };

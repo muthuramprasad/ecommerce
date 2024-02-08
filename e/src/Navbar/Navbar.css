@@ -1,12 +1,22 @@
 
 .navbar-top-all{
-    background-color: white !important;
+    background-color: rgba(248, 249, 250, 0.8) !important; /* Use rgba for transparency */
     position: sticky;
     top: 0;
     z-index: 999;
 }
 
 
+.navbar-top-all .nav-link.active {
+    /* color: #ff4500;  */
+    font-weight: bold; 
+    border-bottom: 3px solid #f04a0e;
+    color:rgb(127, 128, 131) ;
+margin-top: -10px;
+
+ 
+  }
+  
 
 /* CSS for Tablet Screens */
 @media only screen and (min-width: 768px) {

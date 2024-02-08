@@ -1,0 +1,10 @@
+.admin-nav-bar{
+    /* background-color:rgb(183,218,251) !important ; */
+    background-color: rgba(248, 249, 250, 0.8) !important; /* Use rgba for transparency */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.admin-logo{
+margin-top: -25px;
+}

@@ -140,7 +140,7 @@ const Womans = () => {
 
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid fluid-product">
     
       <div className="row mt-5 mx-2" >
         <div className="col-md-2">
