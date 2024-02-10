@@ -83,6 +83,8 @@ app.get('/api/get-products', async (req, res) => {
 });
 
 
+
+
 app.get('/api/get-product/:id', async (req, res) => {
   try {
     const productId = req.params.id;

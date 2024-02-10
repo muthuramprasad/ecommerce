@@ -5,12 +5,12 @@ const calculateTotals = (products) => {
     totalProducts: products.length,
     totalCost: products.reduce((sum, product) => sum + product.price, 0),
     totalMensProducts: products.filter(product => product.category === 'Mens').length,
-    totalWomansProducts: products.filter(product => product.category === 'Womans').length,
+    totalWomensProducts: products.filter(product => product.category === 'Womens').length,
     totalMensCost: products
       .filter(product => product.category === 'Mens')
       .reduce((sum, product) => sum + product.price, 0),
-    totalWomansCost: products
-      .filter(product => product.category === 'Womans')
+    totalWomensCost: products
+      .filter(product => product.category === 'Womens')
       .reduce((sum, product) => sum + product.price, 0),
     totalKidsProducts: products.filter(product => product.category === 'Kids').length,
     totalKidsCost: products
@@ -33,9 +33,9 @@ const initialState = {
     totalProducts: 0,
     totalCost: 0,
     totalMensProducts: 0,
-    totalWomansProducts: 0,
+    totalWomensProducts: 0,
     totalMensCost: 0,
-    totalWomansCost: 0,
+    totalWomensCost: 0,
     totalKidsProducts: 0,
     totalKidsCost: 0,
   },

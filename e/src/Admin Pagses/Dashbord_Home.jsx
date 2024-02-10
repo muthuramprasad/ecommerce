@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import CurrencyRupeeOutlinedIcon from '@mui/icons-material/CurrencyRupeeOutlined';
@@ -10,16 +10,45 @@ import GroupAddOutlinedIcon from '@mui/icons-material/GroupAddOutlined';
 import "./Dashbord_Home.css"
 
 const Home = () => {
-  const totals = useSelector(state => state.products.totals);
+  const dispatch = useDispatch();
+  
 
-  const totalProducts = totals.totalProducts;
-  const totalCost = totals.totalCost;
-  const totalMensProducts = totals.totalMensProducts;
-  const totalWomensProductsCost = totals.totalWomensCost;
-  const totalMensProductsCost = totals.totalMensCost;
-  const totalWomensProducts = totals.totalWomensProducts;
-  const totalKidsProducts = totals.totalKidsProducts;
-  const totalKidsProductsCost = totals.totalKidsCost;
+  const TotalProductCost = useSelector(
+    (state) => state.productTotals.totalProducts
+  );
+
+  const totalCost = useSelector(
+    (state) => state.productTotals.totalCost
+  );
+
+  const totalMensProducts = useSelector(
+    (state) => state.productTotals.totalMensProducts
+  );
+
+
+  const totalMensProductsCost = useSelector(
+    (state) => state.productTotals.totalMensProductsCost
+  );
+
+
+  const totalWomansProducts = useSelector(
+    (state) => state.productTotals.totalWomansProducts
+  );
+
+
+  const totalWomansProductsCost = useSelector(
+    (state) => state.productTotals.totalWomansProductsCost
+  );
+
+
+  const totalKidsProducts = useSelector(
+    (state) => state.productTotals.totalKidsProducts
+  );
+
+
+  const totalKidsProductsCost= useSelector(
+    (state) => state.productTotals.totalKidsProductsCost
+  );
 
   return (
     <div>
@@ -35,7 +64,7 @@ const Home = () => {
         <Row>
           <Col xs={12} md={6} lg={3}>
             <div className="total_products">
-              <h1 className='total_product_count'>{totalProducts}</h1>
+              <h1 className='total_product_count'>{TotalProductCost}</h1>
               <h6 className='total_product' style={{ fontSize: '18px' }}>Total Products</h6>
               <h6 className='total_product_number' style={{ fontSize: '10px' }}>TOTAL NO OF PRODUCTS</h6>
               <div className="icon" style={{ marginLeft: '230px', marginTop: '-80px' }}>
@@ -83,7 +112,7 @@ const Home = () => {
         <Row>
           <Col xs={12} md={6} lg={3}>
             <div className="total_womens_products">
-              <h1 className='total_product_count'> {totalWomensProducts}</h1>
+              <h1 className='total_product_count'> {totalWomansProducts}</h1>
               <h6 className='total_product' style={{ fontSize: '18px' }}>Womans Products </h6>
               <h6 className='total_product_number' style={{ fontSize: '10px' }}>Total No Of Womans Products</h6>
               <div className="icon" style={{ marginLeft: '230px', marginTop: '-80px' }}>
@@ -94,7 +123,7 @@ const Home = () => {
           </Col>
           <Col xs={12} md={6} lg={3}>
             <div className="total_womens_products">
-              <h1 className='total_product_count'> {totalWomensProductsCost}</h1>
+              <h1 className='total_product_count'> {totalWomansProductsCost}</h1>
               <h6 className='total_product' style={{ fontSize: '18px' }}>Womans Products Costs </h6>
               <h6 className='total_product_number' style={{ fontSize: '10px' }}>Total costs of Womans Products</h6>
               <div className="icon" style={{ marginLeft: '230px', marginTop: '-80px' }}>

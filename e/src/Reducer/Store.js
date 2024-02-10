@@ -5,6 +5,10 @@ import rootReducer from './ProductSlice';
 import CartsSlice, { cartLocalStorageMiddleware } from './CartsSlice';
 import OrderSlice from './OrderSlice';
 import productTitleReducer from './productTitleSlice'
+import productTotalsReducer from './TotalSlice'
+
+
+
 
 const store = configureStore({
   reducer: {
@@ -12,6 +16,10 @@ const store = configureStore({
     carts: CartsSlice,
     order: OrderSlice,
     productTitle: productTitleReducer,
+    productTotals: productTotalsReducer,
+  
+
+   
   },
   middleware: (getDefaultMiddleware) => [...getDefaultMiddleware(), cartLocalStorageMiddleware],
 });
